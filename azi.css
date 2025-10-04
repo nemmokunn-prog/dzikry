@@ -397,6 +397,7 @@ main {
   gap: 2rem;
   justify-content: center;
 }
+/* ACHIEVEMENT CARD FIXED: gambar selalu sama, caption selalu di samping di laptop, di bawah di HP */
 .achievement-card {
   display: flex;
   flex-direction: row;
@@ -407,13 +408,14 @@ main {
   padding: 1.3em 1.6em;
   gap: 1.3em;
   min-width: 330px;
+  max-width: 440px;
+  margin: 0 auto;
   transition: box-shadow var(--transition), transform .2s;
-  /* agar wrap di mobile */
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 .achievement-card img {
-  width: 140px;
-  height: 95px;
+  width: 170px;
+  height: 110px;
   object-fit: cover;
   border-radius: 12px;
   background: #222c3a;
@@ -422,7 +424,6 @@ main {
   transition: transform .21s, box-shadow .21s;
   display: block;
   flex-shrink: 0;
-  /* margin-right biar jarak ke caption */
   margin-right: 1.2em;
   margin-bottom: 0;
   padding: 4px;
@@ -449,8 +450,8 @@ main {
   opacity: 0.88;
 }
 .project-card img {
-  width: 170px;
-  height: 95px;
+  width: 140px;
+  height: 85px;
   object-fit: cover;
   border-radius: 12px;
   background: #222c3a;
@@ -549,16 +550,24 @@ main {
   .about-me, .education, .experience-list, .project-card, .achievement-card, .contact-form { padding: 1em; }
   .projects .project-grid { grid-template-columns: 1fr; }
   .achievement-list, .achievement-card { flex-direction: column; align-items: stretch; }
+  .achievement-card {
+    max-width: 98vw;
+    min-width: 0;
+    padding: 1em;
+    gap: 0.7em;
+  }
   .achievement-card img {
     width: 88vw;
-    height: 50vw;
+    height: 48vw;
     margin-right: 0;
     margin-bottom: 1em;
+    padding: 0;
   }
   .project-card img {
     width: 80vw;
     height: 44vw;
     margin-bottom: 1em;
+    padding: 0;
   }
   .modal-content { max-width: 99vw; }
   .tech-desc { padding: 1em 1em; }
